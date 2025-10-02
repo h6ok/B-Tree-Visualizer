@@ -1,3 +1,10 @@
+pj/db-data
+api-gateway/api-gateway
+authentication-service/authApp
+log-service/logApp
+mail-service/mailApp
+diary
+.DS_Store
 # Logs
 logs
 *.log
@@ -7,62 +14,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-.report/
-
-# Runtime data
-.npm
-.eslintcache
-.prettiercache
-
-# Directory for compiled output
-dist/
-dist-ssr/
-
-# Dependency directories
-node_modules/
-
-# Optional npm cache directory
-.npm/
-
-# Optional eslint cache
-.eslintcache
-
-# Optional Prettier cache
-.prettiercache
-
-# Mac OS X
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+node_modules
+dist
+dist-ssr
+*.local
 
 # Editor directories and files
-.idea/
-.vscode/
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.swp
-.history/
-.temp/
+*.sw?
 
-# Environment variables
-.env
-.env.*
-!.env.production
-!.env.staging
-
-# Local configuration files
-*.local
-
-# Test coverage
-coverage/
-
-# Storybook
-.storybook/out/
