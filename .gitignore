@@ -1,0 +1,68 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+.report/
+
+# Runtime data
+.npm
+.eslintcache
+.prettiercache
+
+# Directory for compiled output
+dist/
+dist-ssr/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional Prettier cache
+.prettiercache
+
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.history/
+.temp/
+
+# Environment variables
+.env
+.env.*
+!.env.production
+!.env.staging
+
+# Local configuration files
+*.local
+
+# Test coverage
+coverage/
+
+# Storybook
+.storybook/out/
