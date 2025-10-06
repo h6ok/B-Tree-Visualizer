@@ -4,4 +4,5 @@ export type Tree = {
 
 export type TreeNode = {
   key: number[];
+  next: TreeNode[];
 };
