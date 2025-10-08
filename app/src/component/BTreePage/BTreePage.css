@@ -1,0 +1,18 @@
+.node {
+  display: flex;
+  position: relative;
+}
+
+.key {
+  border: solid 1px;
+  border-collapse: collapse;
+  min-width: 2rem;
+  min-height: 2rem;
+  font-size: 2rem;
+}
+
+.next {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
