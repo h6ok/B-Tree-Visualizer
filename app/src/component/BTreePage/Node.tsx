@@ -19,7 +19,7 @@ export default function Node({
     if (candidate && toIndex === i) {
       return "next";
     }
-    return "key";
+    return "";
   };
 
   const nextStyle = (i) => {
@@ -30,24 +30,37 @@ export default function Node({
     };
   };
 
+  const pathStyle = (i) => {
+    return {
+      position: "absolute",
+      top: "3rem",
+      right: i < 2 ? `${-5 - 8 * i}rem` : "",
+    };
+  };
+
+  const line = (i) => {
+    if (i < 2) {
+      return `M${180 - 128 * i} 0 L0 112`;
+    } else {
+      return "M100 112 L0 0";
+    }
+  };
+
   return (
     <div className="node">
       {keys.map((key, i) => (
         <div className={`${nodeStyle(i)} key`}>
-          <div>{key.index}</div>
+          <div className="index">{key.index}</div>
           {next[i] && (
             <>
-              <div className="path">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10rem"
-                  height="10rem"
-                >
+              <div style={pathStyle(i)}>
+                <svg xmlns="http://www.w3.org/2000/svg">
                   <path
                     id={`path-${i}`}
-                    d="M10 180 L10 30"
+                    d={line(i)}
                     fill="transparent"
                     stroke="black"
+                    strokeWidth="1"
                   />
                 </svg>
               </div>
