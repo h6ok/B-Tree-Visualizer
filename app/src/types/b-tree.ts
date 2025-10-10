@@ -21,6 +21,9 @@ export type BTree = {
 export type Node = {
   keys: Key[];
   next: Node[];
+  candidate: Key | undefined;
+  compare: number | undefined;
+  toIndex: number | undefined;
 };
 
 export type Key = {

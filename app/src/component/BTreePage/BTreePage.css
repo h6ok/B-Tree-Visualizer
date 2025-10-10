@@ -1,14 +1,35 @@
 .node {
   display: flex;
-  position: relative;
 }
 
 .key {
   border: solid 1px;
   border-collapse: collapse;
-  min-width: 2rem;
-  min-height: 2rem;
-  font-size: 2rem;
+  min-width: 2.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.index {
+  margin: auto;
+}
+
+.hasCandidate {
+  border: solid 2px;
+  border-color: red;
+}
+
+.compare {
+  border: solid 2px;
+  border-color: red;
+}
+
+.path {
+  position: absolute;
+  top: 3rem;
 }
 
 .next {

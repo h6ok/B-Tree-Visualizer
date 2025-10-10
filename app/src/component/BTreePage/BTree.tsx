@@ -16,7 +16,24 @@ const NodeValue = {
       ],
       next: [null],
     },
+    {
+      keys: [
+        { index: 7, value: null },
+        { index: 8, value: null },
+        { index: 9, value: null },
+      ],
+      next: [null],
+    },
+    {
+      keys: [
+        { index: 10, value: null },
+        { index: 11, value: null },
+      ],
+      next: [null],
+    },
   ],
+  candidate: { index: 12, value: null },
+  compare: 2,
 };
 export default function BTree() {
   return <Node {...NodeValue} />;
