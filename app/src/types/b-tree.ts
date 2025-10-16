@@ -23,6 +23,7 @@ export type Node = {
   next: Node[];
   candidate: Key | undefined;
   compare: number | undefined;
+  compareAt: number | undefined;
   toIndex: number | undefined;
 };
 
