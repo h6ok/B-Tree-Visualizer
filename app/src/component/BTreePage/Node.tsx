@@ -1,4 +1,4 @@
-import type { Node, Key } from "../../types/b-tree";
+import type { Node } from "../../types/b-tree";
 import "./BTreePage.css";
 
 export default function Node({
@@ -27,7 +27,7 @@ export default function Node({
       position: "absolute",
       top: "10rem",
       right: i < 2 ? `${8 - 10 * i + 4}rem` : `${-12 * (i - 1) + 4}rem`,
-    };
+    } as const;
   };
 
   const pathStyle = (i: number) => {
@@ -35,7 +35,7 @@ export default function Node({
       position: "absolute",
       top: "3rem",
       right: i < 2 ? `${-10 * i}rem` : `${-16 - 2.8 * (i - 2)}rem`,
-    };
+    } as const;
   };
 
   const line = (i: number) => {
@@ -46,7 +46,7 @@ export default function Node({
     }
   };
 
-  const hasEdge = (max: number, i: number): bool => {
+  const hasEdge = (max: number, i: number): boolean => {
     return max - 2 === i;
   };
 
