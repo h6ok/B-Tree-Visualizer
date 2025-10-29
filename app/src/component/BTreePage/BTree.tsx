@@ -1,3 +1,5 @@
+import React from "react";
+import { Box, Slider } from "@mui/material";
 import Node from "./Node";
 
 const NodeValue = {
@@ -46,5 +48,36 @@ const NodeValue = {
   compareAt: 2,
 };
 export default function BTree() {
-  return <Node {...NodeValue} />;
+  const [scale, setScale] = React.useState<number | undefined>();
+  return (
+    <>
+      <Box>
+        <Box
+          display="flex"
+          alignItems="center"
+          sx={{ height: "50px", borderBottom: 1, borderColor: "divider" }}
+        >
+          <Box ml={5} sx={{ width: "20%" }}>
+            <Slider
+              sx={{ marginTop: "20px" }}
+              step={5}
+              value={scale}
+              min={0}
+              max={100}
+              onChange={(_: Event, value: number) => setScale(value)}
+            />
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        className="box"
+        sx={{ height: "500px" }}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Node {...NodeValue} />
+      </Box>
+    </>
+  );
 }
