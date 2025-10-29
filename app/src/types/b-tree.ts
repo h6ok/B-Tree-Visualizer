@@ -31,3 +31,9 @@ export type Key = {
   index: number;
   value: any;
 };
+
+export type Data = {
+  id: number;
+  name: string;
+  age: number;
+};

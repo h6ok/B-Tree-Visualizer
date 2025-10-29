@@ -30,29 +30,19 @@ function App() {
         </Toolbar>
       </AppBar>
       <Grid container spacing={2}>
-        <Grid size={6} mt={2}>
+        <Grid size={8} mt={2}>
           <Paper elevation={3}>
             <Editor />
           </Paper>
         </Grid>
-        <Grid size={6} mt={2}>
+        <Grid size={4} mt={2}>
           <Paper elevation={3}>
             <Datatable />
           </Paper>
         </Grid>
-        <Grid size={12} mt={1}>
-          <Paper elevation={3} sx={{ minHeight: "50vh" }}>
-            <Box
-              sx={{
-                margin: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                paddingTop: "100px",
-              }}
-            >
-              <BTree />
-            </Box>
+        <Grid size={12}>
+          <Paper elevation={3} sx={{ height: "550px" }}>
+            <BTree />
           </Paper>
         </Grid>
       </Grid>

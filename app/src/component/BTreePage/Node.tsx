@@ -51,54 +51,56 @@ export default function Node({
   };
 
   return (
-    <div className="node">
-      {keys.map((key, i) => (
-        <div className={`${nodeStyle(i)} key`}>
-          <div className="index">{key.index}</div>
-          {compareAt === i && (
-            <>
-              <div className="compare-target">{compare}</div>
-              <div className="triangle" />
-            </>
-          )}
-          {next[i] && (
-            <>
-              <div style={pathStyle(i)}>
-                <svg xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    id={`path-${i}`}
-                    d={line(i)}
-                    fill="transparent"
-                    stroke="black"
-                    strokeWidth="1"
-                  />
-                </svg>
-              </div>
-              <div style={nextStyle(i)}>
-                <Node {...next[i]} />
-              </div>
-            </>
-          )}
-          {hasEdge(next.length, i) && (
-            <>
-              <div style={pathStyle(i + 1)}>
-                <svg xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    id={`path-${i + 1}`}
-                    d={line(i + 1)}
-                    fill="transparent"
-                    stroke="black"
-                    strokeWidth="1"
-                  />
-                </svg>
-              </div>
-              <div style={nextStyle(i + 1)}>
-                <Node {...next[i + 1]} />
-              </div>
-            </>
-          )}
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="node">
+        {keys.map((key, i) => (
+          <div className={`${nodeStyle(i)} key`}>
+            <div className="index">{key.index}</div>
+            {compareAt === i && (
+              <>
+                <div className="compare-target">{compare}</div>
+                <div className="triangle" />
+              </>
+            )}
+            {next[i] && (
+              <>
+                <div style={pathStyle(i)}>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      id={`path-${i}`}
+                      d={line(i)}
+                      fill="transparent"
+                      stroke="black"
+                      strokeWidth="1"
+                    />
+                  </svg>
+                </div>
+                <div style={nextStyle(i)}>
+                  <Node {...next[i]} />
+                </div>
+              </>
+            )}
+            {hasEdge(next.length, i) && (
+              <>
+                <div style={pathStyle(i + 1)}>
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      id={`path-${i + 1}`}
+                      d={line(i + 1)}
+                      fill="transparent"
+                      stroke="black"
+                      strokeWidth="1"
+                    />
+                  </svg>
+                </div>
+                <div style={nextStyle(i + 1)}>
+                  <Node {...next[i + 1]} />
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

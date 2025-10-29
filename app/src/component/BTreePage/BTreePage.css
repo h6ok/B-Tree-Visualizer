@@ -1,5 +1,6 @@
 .node {
   display: flex;
+  background-color: white;
 }
 
 .key {
@@ -15,6 +16,7 @@
 
 .index {
   margin: auto;
+  background-color: white;
 }
 
 .hasCandidate {
@@ -57,4 +59,8 @@
   position: absolute;
   top: 5rem;
   right: 5rem;
+}
+
+.box {
+  background-color: #eeeeee;
 }
